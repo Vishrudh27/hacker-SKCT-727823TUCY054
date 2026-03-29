@@ -1,0 +1,20 @@
+project_name: "727823TUCY054_IntrusionDetectionSystem"
+student_name: "Vishrudh N"
+roll_number: "727823TUCY054"
+date: "2026-03-29"
+
+pipeline:
+  - stage: 1
+    name: "Setup Lab"
+    script: setup_lab.py
+    description: "Installs dependencies and creates directories"
+
+  - stage: 2
+    name: "Run IDS Tool"
+    script: run_tool.py
+    description: "Executes the IDS tool across all 3 test cases"
+
+  - stage: 3
+    name: "Analyze Results"
+    script: analyze_results.py
+    description: "Parses logs and generates analysis report"
